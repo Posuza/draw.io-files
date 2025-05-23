@@ -1,170 +1,167 @@
-
-<mxfile host="app.diagrams.net" modified="2025-05-23T14:45:00.000Z" agent="Grok 3" version="27.0.8" etag="abc123" type="device">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI 3 Apps 2 DBs">
-    <mxGraphModel dx="860" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="433" dy="1385" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <!-- Mac Host -->
-        <mxCell id="M1" value="Mac Host" style="swimlane;whiteSpace=wrap;html=1;fillColor=#3299FF;fontColor=#FFFFFF;strokeColor=#006EAF;startSize=30;" vertex="1" parent="1">
-          <mxGeometry x="50" y="50" width="750" height="750" as="geometry" />
+        <mxCell id="M1" value="Mac Host" style="swimlane;whiteSpace=wrap;html=1;fillColor=#3299FF;fontColor=#FFFFFF;strokeColor=#006EAF;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="750" height="800" as="geometry" />
         </mxCell>
-        <!-- Control Plane VM -->
-        <mxCell id="M2" value="microk8s-vm (Control Plane)&#xa;Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
-          <mxGeometry x="100" y="80" width="150" height="100" as="geometry" />
+        <mxCell id="M2" value="microk8s-vm (Control Plane)&#xa;Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=100;" parent="M1" vertex="1">
+          <mxGeometry x="100" y="50" width="150" height="130" as="geometry" />
         </mxCell>
-        <!-- Worker VMs -->
-        <mxCell id="M3" value="microk8s-vm-1 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
-          <mxGeometry x="300" y="80" width="150" height="100" as="geometry" />
+        <mxCell id="M3" value="microk8s-vm-1 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=50;" parent="M1" vertex="1">
+          <mxGeometry x="300" y="50" width="150" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="M4" value="microk8s-vm-2 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
+        <mxCell id="M4" value="microk8s-vm-2 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=60;" parent="M1" vertex="1">
           <mxGeometry x="500" y="80" width="150" height="100" as="geometry" />
         </mxCell>
-        <!-- Control Plane Annotation -->
-        <mxCell id="M5" value="Manages cluster state, schedules pods, processes kubectl commands" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" vertex="1" parent="M1">
+        <mxCell id="M5" value="Manages cluster state, schedules pods, processes kubectl commands" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="M1" vertex="1">
           <mxGeometry x="100" y="190" width="200" height="30" as="geometry" />
         </mxCell>
-        <!-- Control Plane to Worker Interactions -->
-        <mxCell id="M6" value="Schedules pods" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="M1" source="M2" target="M3">
+        <mxCell id="M6" value="Schedules pods" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;labelBackgroundColor=#FFFFFF;" parent="M1" source="M2" target="M3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M7" value="API coordination" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;labelBackgroundColor=#FFFFFF;" edge="1" parent="M1" source="M2" target="M4">
+        <mxCell id="M7" value="API coordination" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;labelBackgroundColor=#FFFFFF;" parent="M1" source="M2" target="M4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- Local Network -->
-        <mxCell id="M8" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M1">
-          <mxGeometry x="350" y="20" width="150" height="80" as="geometry" />
+        <mxCell id="M9" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;startSize=30;" parent="M1" vertex="1">
+          <mxGeometry x="100" y="230" width="600" height="550" as="geometry" />
         </mxCell>
-        <!-- MicroK8s Cluster -->
-        <mxCell id="M9" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;startSize=30;" vertex="1" parent="M1">
-          <mxGeometry x="100" y="230" width="600" height="480" as="geometry" />
-        </mxCell>
-        <!-- NGINX Ingress -->
-        <mxCell id="M10" value="NGINX Ingress" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="M9">
-          <mxGeometry x="250" y="10" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M11" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" vertex="1" parent="M9">
-          <mxGeometry x="200" y="50" width="200" height="30" as="geometry" />
-        </mxCell>
-        <!-- Local Network to Ingress -->
-        <mxCell id="M12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M1" source="M8" target="M10">
+        <mxCell id="M44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M28" target="M41" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- project1 Namespace -->
-        <mxCell id="M13" value="project1 Namespace (2 pods, ClusterIP: 10.152.183.100)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" vertex="1" parent="M9">
-          <mxGeometry x="20" y="90" width="170" height="380" as="geometry" />
+        <mxCell id="M45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M34" target="M41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M14" value="fastapi-project1 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M35" target="M41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M10" value="NGINX Ingress" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="M9" vertex="1">
+          <mxGeometry x="330" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M11" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="M9" vertex="1">
+          <mxGeometry x="170" y="80" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M13" value="project1 Namespace (2 pods, ClusterIP: 10.152.183.100)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
+          <mxGeometry x="20" y="140" width="170" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="M14" value="fastapi-project1 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="M13" vertex="1">
           <mxGeometry x="10" y="50" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="M15" value="Pod 1 (10.1.2.3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M15" value="Pod 1 (10.1.2.3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="M13" vertex="1">
           <mxGeometry x="10" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M16" value="Pod 2 (10.1.2.4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M16" value="Pod 2 (10.1.2.4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="M13" vertex="1">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M17" value="Service&#xa;ClusterIP: 10.152.183.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M13">
-          <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M17" target="M15">
+        <mxCell id="M18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M13" source="M17" target="M15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M17" target="M16">
+        <mxCell id="M19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M13" source="M17" target="M16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M20" value="DB1 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M20" value="DB1 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" parent="M13" vertex="1">
           <mxGeometry x="10" y="240" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="M21" value="DB Service&#xa;ClusterIP: 10.152.183.103" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M21" value="DB Service&#xa;ClusterIP: 10.152.183.103" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" parent="M13" vertex="1">
           <mxGeometry x="10" y="310" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M21" target="M20">
+        <mxCell id="M22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M13" source="M21" target="M20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M15" target="M21">
+        <mxCell id="M23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M13" source="M15" target="M21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M16" target="M21">
+        <mxCell id="M24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M13" source="M16" target="M21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- project2 Namespace -->
-        <mxCell id="M25" value="project2 Namespace (2 pods, ClusterIP: 10.152.183.101)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" vertex="1" parent="M9">
-          <mxGeometry x="210" y="90" width="170" height="260" as="geometry" />
-        </mxCell>
-        <mxCell id="M26" value="fastapi-project2 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="M25">
-          <mxGeometry x="10" y="50" width="150" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="M27" value="Pod 1 (10.1.2.5)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M25">
-          <mxGeometry x="10" y="120" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M28" value="Pod 2 (10.1.2.6)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M25">
-          <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M29" value="Service&#xa;ClusterIP: 10.152.183.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M25">
+        <mxCell id="M17" value="Service&#xa;ClusterIP: 10.152.183.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" parent="M13" vertex="1">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M25" source="M29" target="M27">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="M32" value="project3 Namespace (2 pods, ClusterIP: 10.152.183.102)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
+          <mxGeometry x="400" y="140" width="170" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="M31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M25" source="M29" target="M28">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- project3 Namespace -->
-        <mxCell id="M32" value="project3 Namespace (2 pods, ClusterIP: 10.152.183.102)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" vertex="1" parent="M9">
-          <mxGeometry x="400" y="90" width="170" height="260" as="geometry" />
-        </mxCell>
-        <mxCell id="M33" value="fastapi-project3 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" vertex="1" parent="M32">
+        <mxCell id="M33" value="fastapi-project3 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="M32" vertex="1">
           <mxGeometry x="10" y="50" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="M34" value="Pod 1 (10.1.2.7)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M32">
+        <mxCell id="M34" value="Pod 1 (10.1.2.7)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="M32" vertex="1">
           <mxGeometry x="10" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M35" value="Pod 2 (10.1.2.8)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M32">
+        <mxCell id="M35" value="Pod 2 (10.1.2.8)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="M32" vertex="1">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M36" value="Service&#xa;ClusterIP: 10.152.183.102" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M32">
+        <mxCell id="M37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M32" source="M36" target="M34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M32" source="M36" target="M35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M36" value="Service&#xa;ClusterIP: 10.152.183.102" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" parent="M32" vertex="1">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M32" source="M36" target="M34">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="M39" value="databases Namespace" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
+          <mxGeometry x="210" y="410" width="360" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="M38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M32" source="M36" target="M35">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <!-- databases Namespace -->
-        <mxCell id="M39" value="databases Namespace" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" vertex="1" parent="M9">
-          <mxGeometry x="210" y="360" width="360" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="M40" value="DB2 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="M39">
+        <mxCell id="M40" value="DB2 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" parent="M39" vertex="1">
           <mxGeometry x="10" y="40" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M41" value="DB Service&#xa;ClusterIP: 10.152.183.104" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M39">
+        <mxCell id="M41" value="DB Service&#xa;ClusterIP: 10.152.183.104" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" parent="M39" vertex="1">
           <mxGeometry x="200" y="40" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M39" source="M41" target="M40">
+        <mxCell id="M42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M39" source="M41" target="M40" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <!-- DB Connections -->
-        <mxCell id="M43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M27" target="M41">
+        <mxCell id="M47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M10" target="M17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M28" target="M41">
+        <mxCell id="M48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M10" target="M29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="295" y="150" />
+              <mxPoint x="295" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M10" target="M36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="485" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M25" value="project2 Namespace (2 pods, ClusterIP: 10.152.183.101)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
+          <mxGeometry x="210" y="140" width="170" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="M26" value="fastapi-project2 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="M25" vertex="1">
+          <mxGeometry x="10" y="50" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M27" value="Pod 1 (10.1.2.5)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="M25" vertex="1">
+          <mxGeometry x="10" y="120" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M28" value="Pod 2 (10.1.2.6)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="M25" vertex="1">
+          <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M29" value="Service&#xa;ClusterIP: 10.152.183.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" parent="M25" vertex="1">
+          <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M25" source="M29" target="M27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M34" target="M41">
+        <mxCell id="M31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M25" source="M29" target="M28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M35" target="M41">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="M43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M27" target="M41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="485" y="280" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <!-- Ingress to Services -->
-        <mxCell id="M47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M10" target="M17">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="M8" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="455" y="-70" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="M48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M10" target="M29">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="M49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M9" source="M10" target="M36">
+        <mxCell id="M12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="1" source="M8" target="M10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
