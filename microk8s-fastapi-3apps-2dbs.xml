@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI 3 Apps 2 DBs">
-    <mxGraphModel dx="931" dy="1886" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1087" dy="2017" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,7 +76,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="M25" value="project2 Namespace (2 pods, ClusterIP: 10.152.183.101)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
-          <mxGeometry x="210" y="140" width="170" height="260" as="geometry" />
+          <mxGeometry x="210" y="140" width="170" height="240" as="geometry" />
         </mxCell>
         <mxCell id="M26" value="fastapi-project2 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="M25" vertex="1">
           <mxGeometry x="10" y="50" width="150" height="60" as="geometry" />
@@ -97,7 +97,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="M32" value="project3 Namespace (2 pods, ClusterIP: 10.152.183.102)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
-          <mxGeometry x="400" y="140" width="170" height="260" as="geometry" />
+          <mxGeometry x="400" y="140" width="170" height="240" as="geometry" />
         </mxCell>
         <mxCell id="M33" value="fastapi-project3 Deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="M32" vertex="1">
           <mxGeometry x="10" y="50" width="150" height="60" as="geometry" />
@@ -175,18 +175,18 @@
         <mxCell id="ZPPulk03CZMN2ZV97mfO-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="M9" source="M27" target="M41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="255" y="380" />
-              <mxPoint x="290" y="380" />
+              <mxPoint x="255" y="400" />
+              <mxPoint x="290" y="400" />
             </Array>
             <mxPoint x="341" y="491" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="M9" source="M35" target="M41" edge="1">
+        <mxCell id="M46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="M9" source="M35" target="M41" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="420" y="430" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="520" y="430" />
-              <mxPoint x="425" y="430" />
+              <mxPoint x="520" y="370" />
+              <mxPoint x="470" y="370" />
             </Array>
           </mxGeometry>
         </mxCell>
