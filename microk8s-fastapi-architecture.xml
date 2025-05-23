@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI Detailed Architecture">
-    <mxGraphModel dx="2613" dy="1833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="871" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -110,7 +110,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="22" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="6" vertex="1">
-          <mxGeometry x="311.1880061943476" y="38.289999999999964" width="181.38761904761904" height="31.36" as="geometry" />
+          <mxGeometry x="323.3180061943476" y="38.289999999999964" width="181.38761904761904" height="31.36" as="geometry" />
         </mxCell>
         <mxCell id="McU4MIxMBtLGZJIbte8Q-36" value="Mac host" style="swimlane;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#3299FF);fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
           <mxGeometry x="23.174603174603178" y="241.8" width="683.6507936507937" height="558.2" as="geometry" />
