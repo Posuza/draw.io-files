@@ -1,3 +1,4 @@
+
 <mxfile host="app.diagrams.net" modified="2025-05-23T14:45:00.000Z" agent="Grok 3" version="27.0.8" etag="abc123" type="device">
   <diagram id="diagram_1" name="MicroK8s FastAPI 3 Apps 2 DBs">
     <mxGraphModel dx="860" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
@@ -9,14 +10,14 @@
           <mxGeometry x="50" y="50" width="750" height="750" as="geometry" />
         </mxCell>
         <!-- Control Plane VM -->
-        <mxCell id="M2" value="microk8s-vm (Control Plane)<br>Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
+        <mxCell id="M2" value="microk8s-vm (Control Plane)&#xa;Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
           <mxGeometry x="100" y="80" width="150" height="100" as="geometry" />
         </mxCell>
         <!-- Worker VMs -->
-        <mxCell id="M3" value="microk8s-vm-1 (Worker)<br>Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
+        <mxCell id="M3" value="microk8s-vm-1 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
           <mxGeometry x="300" y="80" width="150" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="M4" value="microk8s-vm-2 (Worker)<br>Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
+        <mxCell id="M4" value="microk8s-vm-2 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="M1">
           <mxGeometry x="500" y="80" width="150" height="100" as="geometry" />
         </mxCell>
         <!-- Control Plane Annotation -->
@@ -31,7 +32,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <!-- Local Network -->
-        <mxCell id="M8" value="Local Network (http://<vm-ip>/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M1">
+        <mxCell id="M8" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M1">
           <mxGeometry x="350" y="20" width="150" height="80" as="geometry" />
         </mxCell>
         <!-- MicroK8s Cluster -->
@@ -62,7 +63,7 @@
         <mxCell id="M16" value="Pod 2 (10.1.2.4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M13">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M17" value="Service<br>ClusterIP: 10.152.183.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M17" value="Service&#xa;ClusterIP: 10.152.183.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M13">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M17" target="M15">
@@ -74,7 +75,7 @@
         <mxCell id="M20" value="DB1 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="M13">
           <mxGeometry x="10" y="240" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="M21" value="DB Service<br>ClusterIP: 10.152.183.103" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M13">
+        <mxCell id="M21" value="DB Service&#xa;ClusterIP: 10.152.183.103" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M13">
           <mxGeometry x="10" y="310" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M13" source="M21" target="M20">
@@ -99,7 +100,7 @@
         <mxCell id="M28" value="Pod 2 (10.1.2.6)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M25">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M29" value="Service<br>ClusterIP: 10.152.183.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M25">
+        <mxCell id="M29" value="Service&#xa;ClusterIP: 10.152.183.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M25">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M25" source="M29" target="M27">
@@ -121,7 +122,7 @@
         <mxCell id="M35" value="Pod 2 (10.1.2.8)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="M32">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M36" value="Service<br>ClusterIP: 10.152.183.102" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M32">
+        <mxCell id="M36" value="Service&#xa;ClusterIP: 10.152.183.102" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M32">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M32" source="M36" target="M34">
@@ -137,7 +138,7 @@
         <mxCell id="M40" value="DB2 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" vertex="1" parent="M39">
           <mxGeometry x="10" y="40" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="M41" value="DB Service<br>ClusterIP: 10.152.183.104" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M39">
+        <mxCell id="M41" value="DB Service&#xa;ClusterIP: 10.152.183.104" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="M39">
           <mxGeometry x="200" y="40" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="M39" source="M41" target="M40">
