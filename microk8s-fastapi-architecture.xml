@@ -1,3 +1,4 @@
+
 <mxfile host="app.diagrams.net" modified="2025-05-23T13:37:00.000Z" agent="Grok 3" version="27.0.8" etag="xyz892" type="device">
   <diagram id="diagram_1" name="MicroK8s FastAPI Detailed Architecture">
     <mxGraphModel dx="860" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
@@ -9,14 +10,14 @@
           <mxGeometry x="50" y="50" width="750" height="650" as="geometry" />
         </mxCell>
         <!-- Control Plane VM -->
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-142" value="microk8s-vm (Control Plane)<br>Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-36">
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-142" value="microk8s-vm (Control Plane)&#xa;Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-36">
           <mxGeometry x="100" y="80" width="150" height="100" as="geometry" />
         </mxCell>
         <!-- Worker VMs -->
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-82" value="microk8s-vm-1 (Worker)<br>Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-36">
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-82" value="microk8s-vm-1 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-36">
           <mxGeometry x="300" y="80" width="150" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-141" value="microk8s-vm-2 (Worker)<br>Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-36">
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-141" value="microk8s-vm-2 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-36">
           <mxGeometry x="500" y="80" width="150" height="100" as="geometry" />
         </mxCell>
         <!-- Control Plane Annotation -->
@@ -51,7 +52,7 @@
         <mxCell id="24" value="Pod 2 (10.1.2.4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="7">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="13" value="Service&lt;br&gt;ClusterIP: 10.152.183.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="7">
+        <mxCell id="13" value="Service&#xa;ClusterIP: 10.152.183.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="7">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="7" source="13" target="23">
@@ -73,7 +74,7 @@
         <mxCell id="26" value="Pod 2 (10.1.2.6)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="8">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="14" value="Service&lt;br&gt;ClusterIP: 10.152.183.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="8">
+        <mxCell id="14" value="Service&#xa;ClusterIP: 10.152.183.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="8">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="8" source="14" target="25">
@@ -95,7 +96,7 @@
         <mxCell id="28" value="Pod 2 (10.1.2.8)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" vertex="1" parent="9">
           <mxGeometry x="90" y="120" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="15" value="Service&lt;br&gt;ClusterIP: 10.152.183.102" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="9">
+        <mxCell id="15" value="Service&#xa;ClusterIP: 10.152.183.102" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" vertex="1" parent="9">
           <mxGeometry x="10" y="180" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="9" source="15" target="27">
@@ -109,20 +110,40 @@
           <mxGeometry x="250" y="10" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="6" source="16" target="13">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="200"/>
+              <mxPoint x="85" y="200"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="6" source="16" target="14">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="200"/>
+              <mxPoint x="275" y="200"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="6" source="16" target="15">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="200"/>
+              <mxPoint x="465" y="200"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="22" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" vertex="1" parent="6">
           <mxGeometry x="200" y="50" width="200" height="30" as="geometry" />
         </mxCell>
         <!-- Local Network to Ingress -->
         <mxCell id="McU4MIxMBtLGZJIbte8Q-204" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-36" source="17" target="16">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="230"/>
+              <mxPoint x="350" y="230"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
