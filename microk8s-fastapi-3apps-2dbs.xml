@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI 3 Apps 2 DBs">
-    <mxGraphModel dx="1087" dy="2017" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="724" dy="1711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -35,9 +35,6 @@
         </mxCell>
         <mxCell id="M10" value="NGINX Ingress" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="M9" vertex="1">
           <mxGeometry x="330" y="40" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M11" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="M9" vertex="1">
-          <mxGeometry x="170" y="80" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M13" value="project1 Namespace (2 pods, ClusterIP: 10.152.183.100)" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;startSize=30;" parent="M9" vertex="1">
           <mxGeometry x="20" y="140" width="170" height="370" as="geometry" />
@@ -189,6 +186,9 @@
               <mxPoint x="470" y="370" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="L6HnaVyXXfiBZxHaUVOo-5" value="&lt;span style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(237, 237, 237), rgb(255, 255, 255));&quot;&gt;Routes /project1, /project2, /project3 to services&lt;/font&gt;&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.04;position2=0.04;" vertex="1" parent="M1">
+          <mxGeometry x="490" y="190" width="240" height="80" as="geometry" />
         </mxCell>
         <mxCell id="M8" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="455" y="-70" width="150" height="80" as="geometry" />
