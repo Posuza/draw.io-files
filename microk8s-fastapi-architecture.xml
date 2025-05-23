@@ -1,20 +1,41 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI Detailed Architecture">
-    <mxGraphModel dx="97" dy="68" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="922" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-82" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-weight: 400; color: rgb(237, 237, 237);&quot;&gt;microk8s-vm-1 (Worker)&lt;/span&gt;&lt;br style=&quot;font-weight: 400; color: rgb(237, 237, 237);&quot;&gt;&lt;span style=&quot;font-weight: 400; color: rgb(237, 237, 237);&quot;&gt;Ubuntu LTS, kubelet, kube-proxy&lt;/span&gt;&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;startSize=30;" vertex="1" parent="1">
-          <mxGeometry x="210" y="460" width="480" height="420" as="geometry" />
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-80" value="" style="group;fillColor=none;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="150" y="70" width="630" height="810" as="geometry" />
         </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-36" value="Mac host" style="swimlane;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#3299FF);fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-82">
-          <mxGeometry x="-70" y="-118.20000000000002" width="550" height="538.2" as="geometry" />
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-71" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
+          <mxGeometry x="20" y="251.1" width="590" height="548.9" as="geometry" />
         </mxCell>
-        <mxCell id="5" value="microk8s-vm-2 (Worker)&lt;br&gt;Ubuntu LTS, kubelet, kube-proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-36" vertex="1">
-          <mxGeometry x="280" y="110" width="240" height="410" as="geometry" />
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-82" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;font-weight: 400; color: rgb(237, 237, 237);&quot;&gt;microk8s-vm-1 (Worker)&lt;/span&gt;&lt;br style=&quot;font-weight: 400; color: rgb(237, 237, 237);&quot;&gt;&lt;span style=&quot;font-weight: 400; color: rgb(237, 237, 237);&quot;&gt;Ubuntu LTS, kubelet, kube-proxy&lt;/span&gt;&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
+          <mxGeometry x="120" y="348.36" width="210" height="430" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-36" vertex="1">
-          <mxGeometry x="73.78048780487805" y="148.20000000000002" width="418.53658536585357" height="365.82000000000005" as="geometry" />
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-75" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#A50040;fillColor=light-dark(#D80073,#A5A8FF);shape=mxgraph.azure.computer;pointerEvents=1;fontColor=#ffffff;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
+          <mxGeometry x="137.45985365853656" y="24.3" width="122.92682926829268" height="105.30000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-74" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.laptop;pointerEvents=1;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
+          <mxGeometry x="445.609756097561" y="89.10000000000001" width="169.02439024390245" height="97.2" as="geometry" />
+        </mxCell>
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-77" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=-0.014;entryY=0.483;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-80" source="17" target="McU4MIxMBtLGZJIbte8Q-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-80" vertex="1">
+          <mxGeometry x="276.5853658536585" y="129.60000000000002" width="115.2439024390244" height="64.80000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-76" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-80" source="17" target="McU4MIxMBtLGZJIbte8Q-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="microk8s-vm (Control Plane)&lt;br&gt;Ubuntu LTS, kube-apiserver, etcd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-80" vertex="1">
+          <mxGeometry x="29.996576496674038" y="279.99923076923073" width="127.53658536585365" height="68.364" as="geometry" />
+        </mxCell>
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-141" value="&lt;font style=&quot;font-weight: normal;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; box-shadow: none !important;&quot;&gt;microk8s-vm-2 (Worker)&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; box-shadow: none !important;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; box-shadow: none !important;&quot;&gt;Ubuntu LTS, kubelet, kube-proxy&lt;/span&gt;&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;startSize=30;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
+          <mxGeometry x="330" y="348.36" width="242.72" height="429.23" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-80" vertex="1">
+          <mxGeometry x="137.46048780487806" y="391.71000000000004" width="425.09951219512186" height="365.82000000000005" as="geometry" />
         </mxCell>
         <mxCell id="7" value="project1 Namespace" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="6" vertex="1">
           <mxGeometry x="13.95121951219512" y="91.26" width="118.58536585365852" height="251.94000000000003" as="geometry" />
@@ -80,10 +101,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="16" value="NGINX Ingress" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="6" vertex="1">
-          <mxGeometry x="274.59756097560967" y="-7.800000000000002" width="127.43902439024386" height="62.40000000000001" as="geometry" />
-        </mxCell>
-        <mxCell id="22" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="6" vertex="1">
-          <mxGeometry x="293.1097560975609" y="23.244000000000003" width="116.03658536585364" height="31.35600000000001" as="geometry" />
+          <mxGeometry x="274.6" y="-7.8" width="127.44" height="87.8" as="geometry" />
         </mxCell>
         <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="6" source="16" target="13" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -94,31 +112,13 @@
         <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="6" source="16" target="15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-80" value="" style="group" vertex="1" connectable="0" parent="McU4MIxMBtLGZJIbte8Q-36">
-          <mxGeometry y="-241.79999999999995" width="550" height="780" as="geometry" />
+        <mxCell id="22" value="Routes /project1, /project2, /project3 to services" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="6" vertex="1">
+          <mxGeometry x="268.5595121951219" y="38.289999999999964" width="156.54" height="31.36" as="geometry" />
         </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-75" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#A50040;fillColor=light-dark(#D80073,#A5A8FF);shape=mxgraph.azure.computer;pointerEvents=1;fontColor=#ffffff;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
-          <mxGeometry x="120.00463414634143" y="23.4" width="107.3170731707317" height="101.4" as="geometry" />
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-36" value="Mac host" style="swimlane;whiteSpace=wrap;html=1;fillColor=light-dark(#FFFFFF,#3299FF);fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
+          <mxGeometry x="20" y="241.8" width="590" height="558.2" as="geometry" />
         </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-74" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.laptop;pointerEvents=1;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
-          <mxGeometry x="389.0243902439024" y="85.8" width="147.5609756097561" height="93.6" as="geometry" />
-        </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-71" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="McU4MIxMBtLGZJIbte8Q-80">
-          <mxGeometry y="241.79999999999998" width="550" height="538.2" as="geometry" />
-        </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-77" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=-0.014;entryY=0.483;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-80" source="17" target="McU4MIxMBtLGZJIbte8Q-74">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="17" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-80" vertex="1">
-          <mxGeometry x="241.46341463414632" y="124.80000000000001" width="100.60975609756098" height="62.400000000000006" as="geometry" />
-        </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-76" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-80" source="17" target="McU4MIxMBtLGZJIbte8Q-75">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="3" value="microk8s-vm (Control Plane)&lt;br&gt;Ubuntu LTS, kube-apiserver, etcd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-80" vertex="1">
-          <mxGeometry x="19.99780487804876" y="279.99999999999994" width="111.34146341463413" height="65.832" as="geometry" />
-        </mxCell>
-        <mxCell id="McU4MIxMBtLGZJIbte8Q-78" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-36" source="McU4MIxMBtLGZJIbte8Q-36" target="17">
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-78" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="McU4MIxMBtLGZJIbte8Q-80" source="McU4MIxMBtLGZJIbte8Q-36" target="17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
