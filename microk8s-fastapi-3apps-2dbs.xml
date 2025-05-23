@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI 3 Apps 2 DBs">
-    <mxGraphModel dx="433" dy="1385" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="758" dy="1598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,20 +10,25 @@
         <mxCell id="M2" value="microk8s-vm (Control Plane)&#xa;Ubuntu LTS, kube-apiserver, etcd, kube-scheduler, kube-controller-manager" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=100;" parent="M1" vertex="1">
           <mxGeometry x="100" y="50" width="150" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="M3" value="microk8s-vm-1 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=50;" parent="M1" vertex="1">
-          <mxGeometry x="300" y="50" width="150" height="130" as="geometry" />
+        <mxCell id="M3" value="microk8s-vm-1 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=60;" parent="M1" vertex="1">
+          <mxGeometry x="320" y="80" width="150" height="90" as="geometry" />
         </mxCell>
         <mxCell id="M4" value="microk8s-vm-2 (Worker)&#xa;Ubuntu LTS, kubelet, kube-proxy" style="swimlane;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#FFFFFF;strokeColor=#2D7600;startSize=60;" parent="M1" vertex="1">
           <mxGeometry x="500" y="80" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="M5" value="Manages cluster state, schedules pods, processes kubectl commands" style="text;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontColor=#000000;" parent="M1" vertex="1">
-          <mxGeometry x="100" y="190" width="200" height="30" as="geometry" />
+          <mxGeometry x="100" y="180" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M6" value="Schedules pods" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;labelBackgroundColor=#FFFFFF;" parent="M1" source="M2" target="M3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="M7" value="API coordination" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;labelBackgroundColor=#FFFFFF;" parent="M1" source="M2" target="M4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="115" />
+              <mxPoint x="375" y="120" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="M9" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;startSize=30;" parent="M1" vertex="1">
           <mxGeometry x="100" y="230" width="600" height="550" as="geometry" />
