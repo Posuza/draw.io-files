@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI 3 Apps 2 DBs">
-    <mxGraphModel dx="758" dy="1598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="361" dy="1337" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -33,8 +33,17 @@
         <mxCell id="M9" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;startSize=30;" parent="M1" vertex="1">
           <mxGeometry x="100" y="230" width="600" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="M44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M28" target="M41" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="M44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="M9" source="M28" target="M41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="380" />
+              <mxPoint x="300" y="380" />
+              <mxPoint x="300" y="450" />
+              <mxPoint x="450" y="450" />
+              <mxPoint x="450" y="455" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="M45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M34" target="M41" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -109,10 +118,10 @@
           <mxGeometry x="210" y="410" width="360" height="130" as="geometry" />
         </mxCell>
         <mxCell id="M40" value="DB2 (PostgreSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9daf8;strokeColor=#6c8ebf;fontColor=#000000;" parent="M39" vertex="1">
-          <mxGeometry x="10" y="40" width="150" height="40" as="geometry" />
+          <mxGeometry x="10" y="45" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M41" value="DB Service&#xa;ClusterIP: 10.152.183.104" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9e1f2;strokeColor=#4b78b6;fontColor=#000000;" parent="M39" vertex="1">
-          <mxGeometry x="200" y="40" width="150" height="40" as="geometry" />
+          <mxGeometry x="200" y="45" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="M42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M39" source="M41" target="M40" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -156,10 +165,13 @@
         <mxCell id="M31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M25" source="M29" target="M28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="M9" source="M27" target="M41" edge="1">
+        <mxCell id="ZPPulk03CZMN2ZV97mfO-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="M9" source="M27" target="M41">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="485" y="280" />
+              <mxPoint x="255" y="378" />
+              <mxPoint x="300" y="378" />
+              <mxPoint x="300" y="450" />
+              <mxPoint x="448" y="450" />
             </Array>
           </mxGeometry>
         </mxCell>
