@@ -1,23 +1,17 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.8">
   <diagram id="diagram_1" name="MicroK8s FastAPI Detailed Architecture">
-    <mxGraphModel dx="1010" dy="550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1705" dy="917" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" value="macOS Host" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="50" y="50" width="780" height="670" as="geometry" />
+        <mxCell id="17" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="450" y="160" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="microk8s-vm (Control Plane)&lt;br&gt;Ubuntu LTS, kube-apiserver, etcd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="2" vertex="1">
-          <mxGeometry x="104" y="130" width="166" height="84.4" as="geometry" />
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-36" value="Mac host" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="280" width="850" height="650" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="microk8s-vm-1 (Worker)&lt;br&gt;Ubuntu LTS, kubelet, kube-proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="2" vertex="1">
-          <mxGeometry x="312" y="130" width="168" height="84.4" as="geometry" />
-        </mxCell>
-        <mxCell id="5" value="microk8s-vm-2 (Worker)&lt;br&gt;Ubuntu LTS, kubelet, kube-proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="2" vertex="1">
-          <mxGeometry x="520" y="130" width="170" height="84.4" as="geometry" />
-        </mxCell>
-        <mxCell id="6" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="2" vertex="1">
-          <mxGeometry x="63" y="241.20000000000002" width="624" height="469" as="geometry" />
+        <mxCell id="6" value="MicroK8s Cluster" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-36" vertex="1">
+          <mxGeometry x="110" y="190" width="624" height="469" as="geometry" />
         </mxCell>
         <mxCell id="7" value="project1 Namespace" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="6" vertex="1">
           <mxGeometry x="20.8" y="117" width="176.8" height="323" as="geometry" />
@@ -97,11 +91,17 @@
         <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="6" source="16" target="15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="17" value="Local Network (http://&lt;vm-ip&gt;/projectX/ui)" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="350" y="20" width="150" height="80" as="geometry" />
+        <mxCell id="4" value="microk8s-vm-1 (Worker)&lt;br&gt;Ubuntu LTS, kubelet, kube-proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-36" vertex="1">
+          <mxGeometry x="320.0000000000001" y="80" width="168" height="84.4" as="geometry" />
         </mxCell>
-        <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;" parent="1" source="17" target="2" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="5" value="microk8s-vm-2 (Worker)&lt;br&gt;Ubuntu LTS, kubelet, kube-proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-36" vertex="1">
+          <mxGeometry x="520" y="80" width="170" height="84.4" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="microk8s-vm (Control Plane)&lt;br&gt;Ubuntu LTS, kube-apiserver, etcd" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="McU4MIxMBtLGZJIbte8Q-36" vertex="1">
+          <mxGeometry x="120" y="80" width="166" height="84.4" as="geometry" />
+        </mxCell>
+        <mxCell id="McU4MIxMBtLGZJIbte8Q-68" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="200" width="830" height="650" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
